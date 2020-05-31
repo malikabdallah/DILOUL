@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurvue.groupe.ConsulterGroupe">
+    <children>
+        <AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" style="-fx-background-repeat: no-repeat ;-fx-background-size:cover;-fx-background-image: url(img/tes.jpg);">
+            <children>
+                <Pane layoutX="86.0" layoutY="71.0" prefHeight="586.0" prefWidth="1144.0" style="-fx-background-color: #fff; -fx-background-radius: 6 px;" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="136.0" AnchorPane.topAnchor="71.0">
+                    <children>
+                        <Pane layoutX="275.0" layoutY="211.0" prefHeight="133.0" prefWidth="370.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+                            <children>
+                                <JFXTextField fx:id="search_text" focusColor="#09e2a7" labelFloat="true" layoutX="7.0" layoutY="30.0" prefHeight="25.0" prefWidth="289.0" promptText="chercher un groupe" />
+                        <ImageView fitHeight="48.0" fitWidth="45.0" layoutX="296.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/loupe.png" />
+                           </image>
+                        </ImageView>
+
+                            </children>
+                        </Pane>
+
+
+
+
+                        <Pane layoutX="265.0" layoutY="411.0" prefHeight="133.0" prefWidth="370.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+                            <children>
+                                <JFXTextField fx:id="search_text2" focusColor="#09e2a7" labelFloat="true" layoutX="14.0" layoutY="30.0" prefHeight="25.0" prefWidth="313.0" promptText="supprimer par id " />
+                                <JFXButton buttonType="RAISED" layoutX="227.0" layoutY="77.0" onMouseClicked="#SupprimerCentre" prefHeight="30.0" prefWidth="94.0" ripplerFill="WHITE" style="-fx-background-color: RED;" text="Supprimer" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="58.0" layoutY="77.0" onMouseClicked="#EditerGroupe" prefHeight="30.0" prefWidth="94.0" ripplerFill="WHITE" style="-fx-background-color: teal;" text="Editer" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                            </children>
+                        </Pane>
+                        <JFXTreeTableView fx:id="treeView" layoutX="732.0" layoutY="23.0" maxWidth="-Infinity" prefHeight="531.0" prefWidth="380.0" />
+                        <Pane layoutX="-4.0" prefHeight="586.0" prefWidth="204.0" style="-fx-background-color: teal;">
+                            <children>
+                                <ImageView fitHeight="101.0" fitWidth="110.0" layoutX="40.0" layoutY="52.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/retour4.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                        <ImageView fitHeight="133.0" fitWidth="231.0" layoutX="329.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/gp1.png" />
+                            </image>
+                        </ImageView>
+
+
+
+
+
+                    </children>
+                </Pane>
+            </children>
+
+
+
+
+
+
+
+        </AnchorPane>
+
+
+
+
+    </children>
+
+
+</StackPane>

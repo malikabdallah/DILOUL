@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurvue.inscription.CreerInscriptionSejour">
+    <children>
+        <AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0">
+            <children>
+
+
+                <JFXTreeTableView fx:id="clients" layoutX="445.0" layoutY="21.0" maxWidth="-Infinity" prefHeight="700.0" prefWidth="355.0" stylesheets="@../css/hotel.css" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="391.0" AnchorPane.topAnchor="15.0" />
+                <Pane layoutX="194.0" layoutY="16.0" prefHeight="692.0" prefWidth="440.0" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="194.0" AnchorPane.rightAnchor="732.0" AnchorPane.topAnchor="16.0">
+                    <children>
+                        <Pane layoutX="12.0" layoutY="64.0" opacity="0.5" prefHeight="97.0" prefWidth="394.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+                            <children>
+                                <JFXTextField id="chercherClient" fx:id="chercheClient" focusColor="#09e2a7" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="313.0" promptText="Chercher client" />
+                                <JFXTextField id="cherchecentre" fx:id="chercheCentre" focusColor="#09e2a7" labelFloat="true" layoutX="14.0" layoutY="58.0" prefHeight="25.0" prefWidth="313.0" promptText="Chercher centre" />
+
+                            </children>
+                        </Pane>
+
+
+
+
+                        <Pane layoutX="6.0" layoutY="179.0" prefHeight="513.0" prefWidth="406.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+                            <children>
+                                <JFXButton fx:id="valider" buttonType="RAISED" layoutX="236.0" layoutY="424.0" onMouseClicked="#validerinscription" prefHeight="30.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: teal;" text="Valider" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <Pane fx:id="paneclient" layoutX="5.0" layoutY="9.0" prefHeight="152.0" prefWidth="195.0">
+                                    <children>
+                                        <Label layoutX="70.0" layoutY="22.0" text="Client">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Label>
+                                        <GridPane layoutY="63.0" prefHeight="105.0" prefWidth="172.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label fx:id="lnom" text="   Nom" GridPane.rowIndex="1" />
+                                                <Label fx:id="nom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label fx:id="lprenom" text="   Prénom" GridPane.rowIndex="2" />
+                                                <Label fx:id="prenom" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label fx:id="age" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label fx:id="lgroupe" text="   Groupe" GridPane.rowIndex="3" />
+                                                <Label fx:id="groupe" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Label text="   Année" GridPane.rowIndex="4" />
+                                                <Label fx:id="datenaissance" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Label fx:id="id" text="   Id" />
+                                                <Label fx:id="iduser" GridPane.columnIndex="1" />
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="panesejour" layoutX="196.0" layoutY="13.0" prefHeight="249.0" prefWidth="182.0">
+                                    <children>
+                                        <Label layoutX="82.0" layoutY="24.0" text="Séjour">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="lcentre" layoutX="6.0" layoutY="55.0" text="Centre" />
+                                        <Label fx:id="centre" layoutX="55.0" layoutY="55.0" />
+                                        <ComboBox fx:id="type" layoutX="43.0" layoutY="87.0" prefWidth="150.0" />
+                                        <Label fx:id="ltype" layoutY="91.0" text="Type" />
+                                        <Label fx:id="lduree" layoutY="137.0" text="Durée" />
+                                        <ComboBox fx:id="duree" layoutX="43.0" layoutY="133.0" prefWidth="150.0" />
+                                        <Label fx:id="ldate" layoutY="182.0" text="Date" />
+                                        <ComboBox fx:id="date" layoutX="43.0" layoutY="178.0" prefWidth="150.0" />
+                                        <Label fx:id="ldepart" layoutX="1.0" layoutY="224.0" text="Départ" />
+                                        <ComboBox fx:id="depart" layoutX="43.0" layoutY="220.0" prefWidth="150.0" />
+                                    </children>
+                                </Pane>
+                                <Label fx:id="lprix" layoutX="21.0" layoutY="289.0" prefHeight="17.0" prefWidth="37.0" text="Prix :" />
+                                <Label fx:id="prix" layoutX="72.0" layoutY="289.0" />
+
+                                <Label fx:id="laccompte" layoutX="20.0" layoutY="340.0" text="Acompte " />
+                                <JFXTextField fx:id="accompte" layoutX="103.0" layoutY="336.0" />
+                            </children>
+                        </Pane>
+                        <Label layoutX="21.0" layoutY="14.0" prefHeight="25.0" prefWidth="158.0" text="Inscription à un séjour">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+
+
+
+
+
+                    </children>
+                </Pane>
+                <JFXTreeTableView fx:id="vueCentre" layoutX="985.0" layoutY="17.0" maxWidth="-Infinity" prefHeight="713.0" prefWidth="343.0" stylesheets="@../css/hotel.css" />
+                <Pane layoutX="-9.0" prefHeight="730.0" prefWidth="182.0" style="-fx-background-color: teal;">
+                    <children>
+                        <ImageView fitHeight="105.0" fitWidth="122.0" layoutX="37.0" layoutY="57.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/retour4.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </children>
+
+
+
+
+
+
+
+        </AnchorPane>
+
+
+
+
+    </children>
+
+
+</StackPane>

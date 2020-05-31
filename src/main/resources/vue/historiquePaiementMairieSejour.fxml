@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurvue.groupe.Historique">
+    <children>
+        <AnchorPane prefHeight="730.0" prefWidth="1366.0">
+            <children>
+                <Pane layoutX="200.0" layoutY="-3.0" prefHeight="730.0" prefWidth="1166.0">
+
+                    <children>
+                        <JFXTreeTableView fx:id="paiementMarieJFXTreeTableView" layoutX="278.0" layoutY="6.0" prefHeight="721.0" prefWidth="849.0" style="-fx-background-radius: 3px;" />
+                      <Pane layoutX="14.0" layoutY="35.0" prefHeight="669.0" prefWidth="232.0" style="-fx-background-color: 5A595; -fx-border-radius: 20; -fx-border-color: teal;">
+                          <children>
+                        <Label layoutX="11.0" layoutY="108.0" text="Séjour" textFill="GREY">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="6.0" layoutY="166.0" text="Durée" textFill="GREY">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1.0" layoutY="210.0" text="Date début" textFill="GREY">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="6.0" layoutY="271.0" text="Date fin" textFill="GREY">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="360.0" prefHeight="17.0" prefWidth="45.0" text="Groupe" textFill="GREY">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="317.0" text="Centre" textFill="GREY">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="sejour" layoutX="82.0" layoutY="109.0" prefHeight="17.0" prefWidth="145.0" />
+                        <Label fx:id="duree" layoutX="64.0" layoutY="166.0" prefHeight="17.0" prefWidth="145.0" />
+                        <Label fx:id="debut" layoutX="82.0" layoutY="211.0" prefHeight="17.0" prefWidth="145.0" />
+                        <Label fx:id="fin" layoutX="64.0" layoutY="271.0" prefHeight="17.0" prefWidth="145.0" />
+                        <Label fx:id="centre" layoutX="73.0" layoutY="317.0" prefHeight="17.0" prefWidth="145.0" />
+                        <Label fx:id="groupe" layoutX="73.0" layoutY="360.0" prefHeight="17.0" prefWidth="145.0" />
+                        <Text layoutX="63.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Données séjour">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                              </children>
+                  </Pane>
+                    </children>
+                </Pane>
+            <Pane prefHeight="730.0" prefWidth="200.0" style="-fx-background-color: teal;">
+               <children>
+                  <ImageView accessibleRole="BUTTON" fitHeight="130.0" fitWidth="113.0" layoutX="34.0" layoutY="43.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/retour4.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurvue.groupe.consulterAssociationGroupeSejour">
+    <children>
+        <AnchorPane id="AnchorPane" fx:id="r" prefHeight="730.0" prefWidth="1366.0" style="-fx-background-repeat: no-repeat; -fx-background-size: cover;">
+            <children>
+                <JFXTreeTableView fx:id="association" layoutX="671.0" layoutY="27.0" maxWidth="-Infinity" prefHeight="676.0" prefWidth="588.0" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="27.0" />
+                <Pane layoutX="258.0" layoutY="24.0" prefHeight="682.0" prefWidth="435.0" style="-fx-background-color: #fff; -fx-background-radius: 6 px;" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="258.0" AnchorPane.rightAnchor="673.0" AnchorPane.topAnchor="24.0">
+                    <children>
+                        <Pane layoutX="22.0" layoutY="28.0" prefHeight="75.0" prefWidth="407.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+                            <children>
+                                <JFXTextField fx:id="chercherAssoc" focusColor="#09e2a7" labelFloat="true" layoutX="33.0" layoutY="29.0" prefHeight="25.0" prefWidth="288.0" promptText="recherche association" />
+                        <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="327.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/loupe.png" />
+                           </image>
+                        </ImageView>
+
+                            </children>
+                        </Pane>
+
+
+
+
+                        <Pane layoutX="22.0" layoutY="112.0" prefHeight="559.0" prefWidth="407.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+                            <children>
+                                <JFXButton fx:id="valider" buttonType="RAISED" layoutX="150.0" layoutY="408.0" onMouseClicked="#paiement" prefHeight="30.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: blue;" text="paiement" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <Pane fx:id="paneclient" prefHeight="161.0" prefWidth="200.0">
+                                    <children>
+                                        <Label layoutX="72.0" layoutY="14.0" text="Groupe">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Label>
+                              <Label layoutX="7.0" layoutY="81.0" text="Nom groupe">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="nomgroupe" layoutX="91.0" layoutY="81.0" prefHeight="17.0" prefWidth="109.0" />
+                              <Label fx:id="idgroupe" layoutX="72.0" layoutY="113.0" prefHeight="17.0" prefWidth="42.0" />
+                              <Label layoutX="7.0" layoutY="113.0" text="Code tiers">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="codetiers" layoutX="77.0" layoutY="113.0" prefHeight="17.0" prefWidth="86.0" />
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="panesejour" layoutX="204.0" prefHeight="255.0" prefWidth="200.0">
+                                    <children>
+                                        <Label layoutX="83.0" layoutY="14.0" text="sejour">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Label>
+                              <Label layoutX="10.0" layoutY="70.0" text="Type">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="typesejour" layoutX="48.0" layoutY="70.0" prefHeight="17.0" prefWidth="158.0" />
+                              <Label layoutX="10.0" layoutY="103.0" text="Date">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="date" layoutX="49.0" layoutY="103.0" prefHeight="17.0" prefWidth="151.0" />
+                              <Label layoutX="11.0" layoutY="137.0" text="Durée">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="duree" layoutX="53.0" layoutY="137.0" prefHeight="17.0" prefWidth="151.0" />
+                              <Label layoutX="12.0" layoutY="178.0" text="Age">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="age" layoutX="47.0" layoutY="178.0" prefHeight="17.0" prefWidth="151.0" />
+                              <Label layoutX="7.0" layoutY="216.0" prefHeight="17.0" prefWidth="64.0" text="Ref sejour">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="refsejour" layoutX="84.0" layoutY="216.0" prefHeight="17.0" prefWidth="109.0" />
+                                    </children>
+                                </Pane>
+                        <JFXButton fx:id="valider1" buttonType="RAISED" layoutX="16.0" layoutY="408.0" onMouseClicked="#ajoutenfant" prefHeight="30.0" prefWidth="109.0" ripplerFill="WHITE" style="-fx-background-color: teal;" text="Ajout enfant" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="6.0" layoutY="324.0" prefHeight="17.0" prefWidth="64.0" text="Prix total">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="prixtotal" layoutX="107.0" layoutY="324.0" prefHeight="17.0" prefWidth="86.0" />
+                        <Label layoutX="3.0" layoutY="294.0" text=" Nombre de place">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="nombre_place" layoutX="117.0" layoutY="294.0" prefHeight="17.0" prefWidth="86.0" />
+                        <Label layoutX="6.0" layoutY="262.0" prefHeight="17.0" prefWidth="75.0" text="Prix unitaire">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="prix_unitaire" layoutX="114.0" layoutY="262.0" prefHeight="17.0" prefWidth="93.0" />
+                        <JFXButton fx:id="valider2" buttonType="RAISED" layoutX="278.0" layoutY="408.0" onMouseClicked="#historiquePaiement" prefHeight="30.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: teal;" text="historique" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Label fx:id="idsejour" layoutX="65.0" layoutY="171.0" prefHeight="17.0" prefWidth="42.0" />
+                        <Label fx:id="idassoc" layoutX="96.0" layoutY="199.0" prefHeight="17.0" prefWidth="80.0" />
+                        <Label layoutX="6.0" layoutY="355.0" text="Reste à payer">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="resteapayer1" layoutX="117.0" layoutY="355.0" prefHeight="17.0" prefWidth="86.0" />
+                        <JFXButton fx:id="valider3" buttonType="RAISED" layoutX="16.0" layoutY="466.0" onMouseClicked="#listeinscrit" prefHeight="30.0" prefWidth="109.0" ripplerFill="WHITE" style="-fx-background-color: grey;" text="liste inscrit" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="valider31" buttonType="RAISED" layoutX="150.0" layoutY="466.0" onMouseClicked="#supprimer" prefHeight="30.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: red;" text="supprimer" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="valider4" buttonType="RAISED" layoutX="282.0" layoutY="466.0" onMouseClicked="#editerAssoc" prefHeight="30.0" prefWidth="93.0" ripplerFill="WHITE" style="-fx-background-color: teal;" text="Edition" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Line endX="404.0" layoutX="3.0" layoutY="255.0" startX="-4.0" />
+                            </children>
+                        </Pane>
+
+
+
+
+
+                    </children>
+                </Pane>
+            <Pane prefHeight="730.0" prefWidth="219.0" style="-fx-background-color: teal;">
+               <children>
+                  <ImageView fitHeight="101.0" fitWidth="109.0" layoutX="28.0" layoutY="35.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/retour4.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            </children>
+
+
+
+
+
+
+
+        </AnchorPane>
+
+
+
+
+    </children>
+
+
+</StackPane>

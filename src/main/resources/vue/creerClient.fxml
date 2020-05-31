@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurvue.client.CreerClient">
+    <children>
+        <AnchorPane prefHeight="730.0" prefWidth="1366.0">
+            <children>
+                <Pane layoutX="272.0" layoutY="14.0" maxWidth="670.0" prefHeight="661.0" prefWidth="670.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+                    <children>
+                        <Label layoutX="12.0" layoutY="201.0" text="Nom client" />
+                        <Label layoutX="12.0" layoutY="268.0" text=" Prénom client" />
+                  <ImageView fitHeight="118.0" fitWidth="128.0" layoutX="240.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/003-student.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="342.0" layoutY="388.0" text="Portable" />
+                  <Label layoutX="342.0" layoutY="201.0" text="Observation" />
+                  <Label layoutX="342.0" layoutY="269.0" text="Email" />
+                  <Label layoutX="20.0" layoutY="388.0" text="Adresse" />
+                  <Label layoutX="342.0" layoutY="329.0" text="Code postal" />
+                  <Label layoutX="13.0" layoutY="329.0" text="Date naissance" />
+                  <Label layoutX="335.0" layoutY="443.0" text="Groupe " />
+                  <Label fx:id="groupelabel" layoutX="401.0" layoutY="443.0" prefHeight="17.0" prefWidth="167.0" />
+
+                        <JFXButton buttonType="RAISED" layoutX="299.0" layoutY="548.0" onMouseClicked="#book" prefHeight="40.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: TEAL;" text="Créer" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </JFXButton>
+                        <TextField fx:id="nom" layoutX="100.0" layoutY="197.0" prefHeight="25.0" prefWidth="167.0" />
+                        <TextField fx:id="prenom" layoutX="100.0" layoutY="264.0" prefHeight="25.0" prefWidth="167.0" />
+                        <DatePicker fx:id="annee" layoutX="100.0" layoutY="325.0" prefHeight="25.0" prefWidth="167.0" />
+
+                        <TextField fx:id="adresse" layoutX="100.0" layoutY="384.0" prefHeight="25.0" prefWidth="167.0" />
+                  <TextField fx:id="observation" layoutX="427.0" layoutY="197.0" prefHeight="25.0" prefWidth="167.0"/>
+                  <TextField fx:id="email" layoutX="427.0" layoutY="262.0" prefHeight="25.0" prefWidth="167.0"/>
+                  <TextField fx:id="poste" layoutX="427.0" layoutY="325.0" prefHeight="25.0" prefWidth="167.0"/>
+                        <TextField fx:id="portable" layoutX="427.0" layoutY="384.0" prefHeight="25.0" prefWidth="167.0" />
+                  <ComboBox fx:id="sexe" layoutX="104.0" layoutY="439.0" prefHeight="25.0" prefWidth="167.0" />
+                  <Label layoutX="27.0" layoutY="452.0" prefHeight="17.0" prefWidth="56.0" text="sexe" />
+
+                    </children>
+                </Pane>
+            <Pane layoutX="993.0" layoutY="14.0" prefHeight="661.0" prefWidth="333.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXTreeTableView fx:id="tablegroupe" layoutX="8.0" layoutY="76.0" prefHeight="569.0" prefWidth="318.0" />
+                  <Label layoutX="14.0" prefHeight="17.0" prefWidth="93.0" />
+                  <JFXTextField fx:id="chercher" layoutX="14.0" layoutY="17.0" prefHeight="25.0" prefWidth="254.0" promptText="chercher un groupe" />
+                  <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="268.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/loupe.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="730.0" prefWidth="200.0" style="-fx-background-color: TEAL;">
+               <children>
+                  <ImageView accessibleRole="BUTTON" fitHeight="126.0" fitWidth="111.0" layoutX="35.0" layoutY="28.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/retour4.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

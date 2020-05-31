@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurvue.centre.EditerCentre">
+   <children>
+
+      <AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" style="-fx-background-repeat: no-repeat ;-fx-background-size:cover;-fx-background-image: url(img/ce.jpg);">
+         <children>
+            <AnchorPane prefHeight="730.0" prefWidth="1366.0">
+               <children>
+                  <Pane layoutX="308.0" layoutY="116.0" prefHeight="481.0" prefWidth="596.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+                     <children>
+                        <Label layoutX="247.0" layoutY="231.0" text="Nom du centre ">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="nomcentre" focusColor="#09e2a7" labelFloat="true" layoutX="364.0" layoutY="219.0" prefWidth="200.0" promptText="Nom du centre">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <ImageView fitHeight="123.0" fitWidth="150.0" layoutX="332.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/010-home.png" />
+                           </image>
+                        </ImageView>
+
+
+
+                        <Label layoutX="247.0" layoutY="335.0" text="Capacité">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="capacite" focusColor="#09e2a7" labelFloat="true" layoutX="364.0" layoutY="332.0" prefHeight="25.0" prefWidth="200.0" promptText="Capacite du centre" />
+                        <Pane prefHeight="481.0" prefWidth="200.0" style="-fx-background-color: TEAL;">
+                           <children>
+                              <ImageView accessibleRole="BUTTON" fitHeight="87.0" fitWidth="102.0" layoutX="40.0" layoutY="60.0" onMouseClicked="#retour" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/retour4.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+
+                        <JFXButton buttonType="RAISED" layoutX="421.0" layoutY="411.0" onMouseClicked="#valider" prefHeight="40.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: TEAL;" text="Editer" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+
+
+
+
+</StackPane>

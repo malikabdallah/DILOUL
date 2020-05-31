@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox   xmlns="http://javafx.com/javafx/8"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="controlleurvue.ConnexionView"
+        prefHeight="900.0" prefWidth="1600.0">
+
+    <children>
+
+        <HBox alignment="CENTER">
+            <children>
+                <Text text="Identifiant :"/>
+                <TextField fx:id="nicknameTextField" onKeyReleased="#connectKey"/>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER">
+            <children>
+                <Button fx:id="connexionButton" onAction="#connect" text="Se connecter"/>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER">
+            <children>
+                <Label fx:id="errorLabel" textFill="#d00b1a"/>
+            </children>
+        </HBox>
+
+    </children>
+
+</VBox>

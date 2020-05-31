@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurvue.optionsAvance.Comptabilite">
+    <children>
+
+        <AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" style="-fx-background-repeat: no-repeat ;-fx-background-size:cover;-fx-background-image: url(img/ce.jpg);">
+            <children>
+                <AnchorPane prefHeight="730.0" prefWidth="1366.0">
+                    <children>
+                        <Pane layoutX="308.0" layoutY="116.0" prefHeight="481.0" prefWidth="596.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+                            <children>
+                                <ImageView fitHeight="123.0" fitWidth="150.0" layoutX="332.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/001-contract-1.png" />
+                                    </image>
+                                </ImageView>
+
+
+
+                                <Label layoutX="241.0" layoutY="231.0" text="Date">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Pane prefHeight="481.0" prefWidth="200.0" style="-fx-background-color: TEAL;">
+                                    <children>
+                                        <ImageView accessibleRole="BUTTON" fitHeight="87.0" fitWidth="102.0" layoutX="40.0" layoutY="60.0" onMouseClicked="#retour" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../img/retour4.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </Pane>
+
+                                <JFXButton buttonType="RAISED" layoutX="421.0" layoutY="411.0" onMouseClicked="#valider" prefHeight="40.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: TEAL;" text="Genere" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </JFXButton>
+                        <JFXDatePicker fx:id="date" layoutX="350.0" layoutY="227.0" prefHeight="28.0" prefWidth="200.0" />
+
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+
+
+
+
+</StackPane>

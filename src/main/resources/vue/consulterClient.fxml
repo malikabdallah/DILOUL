@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurvue.client.ConsulterClient">
+    <children>
+        <AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" style="-fx-background-repeat: no-repeat; -fx-background-size: cover;">
+            <children>
+                <JFXTreeTableView fx:id="treeView" layoutX="664.0" layoutY="31.0" maxWidth="-Infinity" prefHeight="685.0" prefWidth="616.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="31.0" />
+                <Pane layoutX="226.0" layoutY="15.0" prefHeight="700.0" prefWidth="421.0" style="-fx-background-color: #fff; -fx-background-radius: 6 px;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="719.0" AnchorPane.topAnchor="15.0">
+                    <children>
+                        <Pane layoutX="14.0" layoutY="7.0" prefHeight="133.0" prefWidth="378.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+                            <children>
+                                <JFXTextField fx:id="chercherclient" focusColor="#09e2a7" labelFloat="true" layoutX="14.0" layoutY="54.0" prefHeight="25.0" prefWidth="313.0" promptText="chercher client" />
+                        <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="327.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/loupe.png" />
+                           </image>
+                        </ImageView>
+
+                            </children>
+                        </Pane>
+            
+            
+            
+            
+                        <Pane layoutX="14.0" layoutY="146.0" prefHeight="548.0" prefWidth="378.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+                            <children>
+                                <JFXButton buttonType="RAISED" layoutX="22.0" layoutY="466.0" onMouseClicked="#envoieEmail" prefHeight="30.0" prefWidth="101.0" ripplerFill="WHITE" style="-fx-background-color: teal;" text="Email" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" layoutX="180.0" layoutY="504.0" onMouseClicked="#SupprimerCentre" prefHeight="30.0" prefWidth="101.0" ripplerFill="WHITE" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="180.0" layoutY="466.0" onMouseClicked="#historiqueClient" prefHeight="30.0" prefWidth="101.0" ripplerFill="WHITE" style="-fx-background-color: teal;" text="historique" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="14.0" layoutY="18.0" text="nom" />
+                        <Label layoutX="14.0" layoutY="70.0" text="prenom" />
+                        <Label layoutX="14.0" layoutY="124.0" text="adresse" />
+                        <Label layoutX="14.0" layoutY="215.0" text="portable" />
+                        <Label layoutX="8.0" layoutY="259.0" text="observation" />
+                        <Label layoutX="8.0" layoutY="303.0" text="email" />
+                        <Label layoutX="10.0" layoutY="344.0" text="code" />
+                        <Label layoutX="2.0" layoutY="378.0" text="groupe" />
+                        <Label layoutX="14.0" layoutY="166.0" text="date" />
+                        <Label fx:id="lnom" layoutX="62.0" layoutY="18.0" prefHeight="17.0" prefWidth="80.0" />
+                        <Label fx:id="lprenom" layoutX="62.0" layoutY="70.0" />
+                        <Label fx:id="ladresse" layoutX="62.0" layoutY="124.0" />
+                        <Label fx:id="ldate" layoutX="62.0" layoutY="166.0" />
+                        <Label fx:id="lportable" layoutX="76.0" layoutY="215.0" />
+                        <Label fx:id="lobservation" layoutX="116.0" layoutY="259.0" prefHeight="17.0" prefWidth="80.0" />
+                        <Label fx:id="lemail" layoutX="53.0" layoutY="303.0" prefHeight="17.0" prefWidth="161.0" />
+                        <Label fx:id="lcode" layoutX="56.0" layoutY="344.0" prefHeight="17.0" prefWidth="62.0" />
+                        <Label fx:id="lgroupe" layoutX="57.0" layoutY="378.0" prefHeight="17.0" prefWidth="123.0" />
+                        <Label layoutX="10.0" layoutY="417.0" text="id client" />
+                        <Label fx:id="idclient" layoutX="70.0" layoutY="419.0" prefHeight="17.0" prefWidth="74.0" />
+                        <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="504.0" onMouseClicked="#editerClient" prefHeight="30.0" prefWidth="101.0" ripplerFill="WHITE" style="-fx-background-color: teal;" text="Editer" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                            </children>
+                        </Pane>
+
+
+
+
+
+                    </children>
+                </Pane>
+            <Pane prefHeight="730.0" prefWidth="200.0" style="-fx-background-color: teal;">
+               <children>
+                  <ImageView accessibleRole="BUTTON" fitHeight="108.0" fitWidth="109.0" layoutX="38.0" layoutY="35.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/retour4.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            </children>
+
+
+
+
+
+
+
+        </AnchorPane>
+
+
+
+
+    </children>
+
+
+</StackPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurvue.client.HistoriqueClient">
+   <children>
+      <AnchorPane prefHeight="730.0" prefWidth="1366.0">
+         <children>
+            <Pane layoutX="210.0" layoutY="-3.0" prefHeight="730.0" prefWidth="1156.0">
+
+               <children>
+                  <JFXTreeTableView fx:id="annulations" layoutX="424.0" layoutY="11.0" prefHeight="716.0" prefWidth="703.0" style="-fx-background-radius: 3px;" visible="false" />
+                  <JFXTreeTableView fx:id="reservations" layoutX="424.0" layoutY="14.0" prefHeight="716.0" prefWidth="703.0" style="-fx-background-radius: 3px;" visible="false" />
+                  <JFXTreeTableView fx:id="inscriptions" layoutX="424.0" layoutY="12.0" prefHeight="702.0" prefWidth="703.0" style="-fx-background-radius: 3px;" />
+                  <Pane layoutX="21.0" layoutY="14.0" prefHeight="702.0" prefWidth="395.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="68.0" text="nom" />
+                        <Label fx:id="lnom" layoutX="78.0" layoutY="68.0" />
+                        <Label layoutX="14.0" layoutY="100.0" text="prenom" />
+                        <Label fx:id="lprenom" layoutX="78.0" layoutY="100.0" />
+                        <Label layoutX="14.0" layoutY="130.0" text="date naissance" />
+                        <Label fx:id="ldatenaissance" layoutX="113.0" layoutY="130.0" />
+                        <Label layoutX="14.0" layoutY="173.0" text="groupe" />
+                        <Label fx:id="lgroupe" layoutX="78.0" layoutY="173.0" />
+                        <Label layoutX="14.0" layoutY="209.0" text="numero" />
+                        <Label fx:id="lnumero" layoutX="78.0" layoutY="209.0" />
+                        <Label layoutX="14.0" layoutY="249.0" text="observation" />
+                        <Label fx:id="lobservation" layoutX="78.0" layoutY="249.0" />
+                        <Label layoutX="14.0" layoutY="292.0" text="email" />
+                        <Label fx:id="lemail" layoutX="78.0" layoutY="292.0" />
+                        <Label layoutX="14.0" layoutY="352.0" text="adresse" />
+                        <Label fx:id="ladresse" layoutX="78.0" layoutY="352.0" />
+                        <Label layoutX="14.0" layoutY="391.0" text="code postale" />
+                        <Label fx:id="lcodepostale" layoutX="92.0" layoutY="391.0" />
+                        <Label layoutX="78.0" layoutY="437.0" />
+                        <JFXRadioButton fx:id="btninscription" layoutX="13.0" layoutY="454.0" onMouseClicked="#visualiserinscription" text="inscription" />
+                        <JFXRadioButton fx:id="btnreservation" layoutX="14.0" layoutY="420.0" onMouseClicked="#visualiserReservation" text="reservation" />
+                        <JFXRadioButton fx:id="btnannulation" layoutX="14.0" layoutY="487.0" onMouseClicked="#visualiserannulation" text="annulation" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane prefHeight="730.0" prefWidth="200.0" style="-fx-background-color: teal;">
+               <children>
+                  <ImageView accessibleRole="BUTTON" fitHeight="133.0" fitWidth="118.0" layoutX="41.0" layoutY="48.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/retour4.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

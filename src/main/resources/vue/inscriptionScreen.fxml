@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stack" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurvue.inscription.InscriptionScreen">
+    <children>
+        <AnchorPane prefHeight="730.0" prefWidth="1366.0" style="-fx-background-repeat: no-repeat ;-fx-background-size:cover;-fx-background-image: url(img/iscren.jpg);">
+            <children>
+                <Pane fx:id="pane_1" layoutX="167.0" layoutY="120.0" maxHeight="200.0" maxWidth="200.0" minHeight="200.0" minWidth="200.0" onMouseClicked="#inscrireClientSejour" onMouseEntered="#souris_dessus_1" onMouseExited="#souris_sort_1" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px">
+                    <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="62.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/003-student.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="49.0" layoutY="145.0" text="Faire une inscription" textFill="#5498f2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                    </children>
+                </Pane>
+                <Pane fx:id="pane_2" layoutX="583.0" layoutY="120.0" maxHeight="200.0" maxWidth="200.0" minHeight="200.0" minWidth="200.0" onMouseClicked="#consulterListeInscription" onMouseEntered="#souris_dessus_2" onMouseExited="#souris_sort_2" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                    <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="62.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/005-list.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="16.0" layoutY="141.0" text="Consulter liste inscription" textFill="#5498f2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                    </children>
+                </Pane>
+
+                <Pane fx:id="pane_3" layoutX="964.0" layoutY="393.0" maxHeight="200.0" maxWidth="200.0" minHeight="200.0" minWidth="200.0" onMouseClicked="#goback" onMouseEntered="#souris_dessus_3" onMouseExited="#souris_sort_3" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px">
+                    <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="62.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/010-home.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="49.0" layoutY="145.0" text="Retour acceuil" textFill="#5498f2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                    </children>
+                </Pane>
+                <Pane fx:id="pane_21" layoutX="167.0" layoutY="393.0" maxHeight="200.0" maxWidth="200.0" minHeight="200.0" minWidth="200.0" onMouseClicked="#consulterAnnulation" onMouseEntered="#souris_dessus_5" onMouseExited="#souris_sort_5" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                    <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="62.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/delete.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="17.0" layoutY="141.0" text="Consulter les annulations" textFill="#5498f2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                    </children>
+                </Pane>
+                <Pane fx:id="pane_111" layoutX="583.0" layoutY="393.0" maxHeight="200.0" maxWidth="200.0" minHeight="200.0" minWidth="200.0" onMouseClicked="#consulterLesReservations" onMouseEntered="#souris_dessus_reservationconsulter" onMouseExited="#souris_sort_reservationconsulter" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px">
+                    <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="62.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/003-student.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="16.0" layoutY="143.0" text="Consulter les reservations" textFill="#5498f2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                    </children>
+                </Pane>
+
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

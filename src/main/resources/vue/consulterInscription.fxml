@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurvue.inscription.ConsulterInscription">
+    <children>
+        <AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0">
+            <children>
+                <JFXTreeTableView fx:id="treeView" layoutX="445.0" layoutY="21.0" maxWidth="-Infinity" prefHeight="700.0" prefWidth="623.0" stylesheets="@../css/hotel.css" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                <Pane layoutX="227.0" layoutY="15.0" prefHeight="700.0" prefWidth="478.0" style="-fx-background-color: #fff; -fx-background-radius: 6 px;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="227.0" AnchorPane.rightAnchor="661.0" AnchorPane.topAnchor="15.0">
+                    <children>
+                        <Pane layoutX="11.0" layoutY="14.0" prefHeight="84.0" prefWidth="446.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+                            <children>
+                                <JFXTextField fx:id="search_text" focusColor="#09e2a7" labelFloat="true" layoutX="124.0" layoutY="15.0" prefHeight="25.0" prefWidth="235.0" promptText="id ,nom,sejour .etc " />
+                                <Label layoutY="6.0" prefHeight="43.0" prefWidth="124.0" text=" Chercher inscription">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                        <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="359.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/loupe.png" />
+                           </image>
+                        </ImageView>
+
+                            </children>
+                        </Pane>
+
+
+
+
+                        <Pane layoutX="8.0" layoutY="109.0" prefHeight="589.0" prefWidth="459.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+                            <children>
+                                <JFXButton buttonType="RAISED" layoutX="32.0" layoutY="536.0" onMouseClicked="#EditerFacture" prefHeight="30.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: green;" text="facture" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="paiement" buttonType="RAISED" layoutX="153.0" layoutY="536.0" onMouseClicked="#paiement" prefHeight="30.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: teal;" text="paiement" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                  <Label layoutX="14.0" layoutY="80.0" text="Date " />
+                                  <Label layoutX="14.0" layoutY="112.0" text="Type" />
+                                  <Label layoutX="14.0" layoutY="146.0" text="Centre" />
+                                  <Label layoutX="14.0" layoutY="201.0" prefHeight="17.0" prefWidth="56.0" text="Capacite" />
+                                  <Label fx:id="ldates" layoutX="59.0" layoutY="80.0" />
+                                  <Label fx:id="ltype" layoutX="59.0" layoutY="112.0" />
+                                  <Label fx:id="lcentre" layoutX="59.0" layoutY="146.0" />
+                                  <Label fx:id="lcapacite" layoutX="81.0" layoutY="201.0" prefHeight="17.0" prefWidth="82.0" />
+                                  <Label layoutX="14.0" layoutY="176.0" text="Prix" />
+                                  <Label fx:id="lprix" layoutX="59.0" layoutY="176.0" />
+                                <Label layoutX="46.0" layoutY="23.0" text="Séjour">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="27.0" layoutY="255.0" prefHeight="17.0" prefWidth="80.0" text="Client">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                  <Label layoutX="19.0" layoutY="298.0" text="Nom" />
+                                  <Label layoutX="19.0" layoutY="323.0" text="Prénom" />
+                                  <Label layoutX="19.0" layoutY="348.0" prefHeight="17.0" prefWidth="82.0" text="Date naissance" />
+                                  <Label layoutX="19.0" layoutY="400.0" text="Email" />
+                                  <Label layoutX="19.0" layoutY="374.0" text="Téléphone" />
+                                  <Label fx:id="lnom" layoutX="98.0" layoutY="298.0" />
+                                  <Label fx:id="lprenom" layoutX="98.0" layoutY="323.0" />
+                                  <Label fx:id="ldate" layoutX="120.0" layoutY="348.0" prefHeight="17.0" prefWidth="67.0" />
+                                  <Label fx:id="lnumero" layoutX="98.0" layoutY="374.0" />
+                                  <Label fx:id="lemail" layoutX="98.0" layoutY="400.0" prefHeight="17.0" prefWidth="360.0" />
+                                <Label layoutX="33.0" layoutY="494.0" prefHeight="17.0" prefWidth="80.0" text="Reste à payer" />
+                                <Label fx:id="idinscription" layoutX="122.0" layoutY="470.0" prefHeight="17.0" prefWidth="87.0" />
+                                <Label layoutX="33.0" layoutY="470.0" text="Id inscription" />
+                                <Label fx:id="lreste" layoutX="125.0" layoutY="494.0" prefHeight="17.0" prefWidth="80.0" />
+                                <JFXButton buttonType="RAISED" layoutX="281.0" layoutY="536.0" onMouseClicked="#annuler" prefHeight="30.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: red;" text="annuler" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <Label layoutX="265.0" layoutY="470.0" text="id sejour" />
+                                <Label id="idsejour" fx:id="idsejour" layoutX="321.0" layoutY="470.0" prefHeight="17.0" prefWidth="80.0" />
+                                <Label layoutX="265.0" layoutY="503.0" text="id client" />
+                                <Label fx:id="idclient" layoutX="351.0" layoutY="503.0" />
+                        <Label layoutX="13.0" layoutY="47.0" prefHeight="17.0" prefWidth="133.0" text="inscription de groupe" />
+                        <Label fx:id="groupe" layoutX="146.0" layoutY="47.0" prefHeight="17.0" prefWidth="79.0" />
+                            </children>
+                        </Pane>
+
+
+
+
+
+                    </children>
+                </Pane>
+                <Pane prefHeight="730.0" prefWidth="195.0" style="-fx-background-color: teal;">
+                    <children>
+                        <ImageView fitHeight="99.0" fitWidth="106.0" layoutX="39.0" layoutY="44.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/retour4.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </children>
+
+
+
+
+
+
+
+        </AnchorPane>
+
+
+
+
+    </children>
+
+
+</StackPane>
